@@ -1,5 +1,7 @@
 const clickButton = document.querySelectorAll('.btncarrito')
+const clickButtonCompra = document.getElementById('btncarritocompra')
 const tabla = document.querySelector('.tabla-carrito')
+console.log(clickButtonCompra)
 //console.log(clickButton)
 //console.log(tabla-carrito)
 let carrito = []
@@ -141,3 +143,33 @@ window.onload = function(){
         renderCarrito()
     }
 }
+
+//console.log(clickButtonCompra)
+clickButtonCompra.addEventListener('click', () => {
+    swal.fire({
+        icon: "info",
+        title: "Usted esta por finalizar su compra",
+        text: "Si desea realizar la compra presione SI en caso contrario para volver al carrito precione NO",
+        showCancelButton: true,
+        confirmButtonText: "Comprar",
+        cancelButtonText: "Cancelar"
+    })
+})
+// clickButtonCompra.onclick = () => {
+//     swal.fire({
+//         icon: "info",
+//         title: "Usted esta por finalizar su compra",
+//         text: "Si desea realizar la compra presione SI en caso contrario para volver al carrito precione NO",
+//         showCancelButton: true,
+//         confirmButtonText: "Comprar",
+//         cancelButtonText: "Cancelar"
+//     }).then((result) => {
+//         if (result == true) {
+//             Swal.fire({
+//                 icon: "success",     
+//                 title: "Gracias por comprar con nosotros",
+//              }
+//             )
+//         }
+//       })
+// }
